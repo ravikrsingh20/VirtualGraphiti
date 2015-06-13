@@ -39,8 +39,8 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         Properties prop = new Properties();
         prop.put("hibernate.format_sql", "true");
         prop.put("hibernate.show_sql", "true");
-        prop.put("hibernate.hbm2ddl.auto", "update");
-        prop.put("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
+        prop.put("hibernate.hbm2ddl.auto", "create");
+        prop.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
         return prop;
     }
 	
@@ -48,10 +48,10 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 	public BasicDataSource dataSource() {
 		
 		BasicDataSource ds = new BasicDataSource();
-	    ds.setDriverClassName("com.mysql.jdbc.Driver");
-		ds.setUrl("jdbc:mysql://localhost:3306/vg");
-		ds.setUsername("vgdba");
-		ds.setPassword("P@ssVG_dba");
+	    ds.setDriverClassName("org.postgresql.Driver");
+		ds.setUrl("jdbc:postgresql://ec2-54-83-46-91.compute-1.amazonaws.com:5432/db7kekvrv4551b?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory");
+		ds.setUsername("fafhktxspipfgh");
+		ds.setPassword("apnKU-wE--VYn_ZIw2fq2ATxEs");
 		return ds;
 	}
 	

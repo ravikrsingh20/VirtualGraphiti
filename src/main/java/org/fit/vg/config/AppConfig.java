@@ -49,9 +49,9 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 		
 		BasicDataSource ds = new BasicDataSource();
 	    ds.setDriverClassName("org.postgresql.Driver");
-		ds.setUrl("jdbc:postgresql://ec2-54-83-46-91.compute-1.amazonaws.com:5432/db7kekvrv4551b?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory");
-		ds.setUsername("fafhktxspipfgh");
-		ds.setPassword("apnKU-wE--VYn_ZIw2fq2ATxEs");
+		ds.setUrl("jdbc:postgresql://ec2-54-83-36-90.compute-1.amazonaws.com/de40i1poj44v5p?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory");
+		ds.setUsername("pskcfhxttjlfor");
+		ds.setPassword("GhjJgt4nFPN24KNnboJZBCxejE");
 		return ds;
 	}
 	

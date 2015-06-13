@@ -34,13 +34,12 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 
         return builder.buildSessionFactory();
     }
-
 	private Properties getHibernateProperties() {
         Properties prop = new Properties();
         prop.put("hibernate.format_sql", "true");
         prop.put("hibernate.show_sql", "true");
-        prop.put("hibernate.hbm2ddl.auto", "create");
-        prop.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
+        prop.put("hibernate.hbm2ddl.auto", "update");
+        prop.put("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
         return prop;
     }
 	
@@ -48,10 +47,10 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 	public BasicDataSource dataSource() {
 		
 		BasicDataSource ds = new BasicDataSource();
-	    ds.setDriverClassName("org.postgresql.Driver");
-		ds.setUrl("jdbc:postgresql://ec2-54-83-36-90.compute-1.amazonaws.com/de40i1poj44v5p?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory");
-		ds.setUsername("pskcfhxttjlfor");
-		ds.setPassword("GhjJgt4nFPN24KNnboJZBCxejE");
+	    ds.setDriverClassName("com.mysql.jdbc.Driver");
+		ds.setUrl("jdbc:mysql://us-cdbr-iron-east-02.cleardb.net");
+		ds.setUsername("ba71cf8cf2a19b");
+		ds.setPassword("b9e9e292");
 		return ds;
 	}
 	
